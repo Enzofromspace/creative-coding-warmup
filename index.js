@@ -10,6 +10,7 @@ let context = canvas.getContext('2d');
 
 //This for loop draws 5 squares - width property adjusts square width 
 // The nexted loop creates an even grid of squares
+
 for(let i = 0; i < 5; i++){
   for(let j = 0; j < 5; j++){
     let width = 60;
@@ -21,6 +22,12 @@ for(let i = 0; i < 5; i++){
     context.beginPath();
     context.rect(x,y,width,height);
     context.stroke();
+    //this conditional changes how and when the inner square is drawn
+    if(i > 0 && i < 4) {
+      context.beginPath();
+      context.rect(x + 8, y + 8, width - 16, height - 16);
+      context.stroke();
+    }
   }
 }
 
