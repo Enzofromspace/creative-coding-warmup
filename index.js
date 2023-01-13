@@ -3,7 +3,7 @@ import './style.css';
 
 // Write Javascript code!
 const appDiv = document.getElementById('app');
-appDiv.innerHTML = `<h1>Drawing with JS</h1>`;
+appDiv.innerHTML = `<h1>🔥Drawing with JS 🔥</h1>`;
 
 let canvas = document.querySelector('canvas');
 let context = canvas.getContext('2d');
@@ -23,7 +23,7 @@ for(let i = 0; i < 5; i++){
     context.rect(x,y,width,height);
     context.stroke();
     //this conditional changes how and when the inner square is drawn
-    if(i > 0 && i < 4) {
+    if(Math.random() > 0.5) {
       context.beginPath();
       context.rect(x + 8, y + 8, width - 16, height - 16);
       context.stroke();
